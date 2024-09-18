@@ -1,0 +1,324 @@
+.shadow:hover {
+    cursor: pointer;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4), /* Stronger inner shadow for pressed effect */
+    inset -1px -1px 2px rgba(255, 255, 255, 0.3); /* Adjusted lighter shadow */
+    transform: translateY(2px); /* Simulate button being pressed down */
+    background: #c0c0c0; /* Slightly darker gray on hover */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 85%;
+}
+
+
+.nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+.nav_social {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+
+
+.nav_svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: rotate(90deg);
+}
+
+.nav_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+.nav_txt {
+    font-size: 18px;
+}
+
+.nav_round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 3.5rem;
+}
+
+.nav_icons {
+    font-size: 35px;
+    width: 2rem;
+    height: 2rem;
+}
+
+.header_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20%;
+    margin-top: 10%;
+}
+
+
+.menu_txt2 {
+    font-size: 14px;
+    color: #1b2432;
+}
+
+.menu_txt3 {
+    font-size: 18px;
+    color: #1b2432;
+    margin-top: 1rem;
+    letter-spacing: 4px;
+}
+
+.logo_box {
+    display: flex;
+}
+
+.logo_svg {
+    width: 35vw;
+}
+
+.nav_icons2 {
+    font-size: 65px;
+}
+
+/*footer*/
+
+.response {
+    background-color: #902124;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    width: 84%;
+    margin-top: 5rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.form_header {
+    font-size: 52px;
+    color: white;
+    font-weight: initial;
+}
+
+.menu_txt {
+    font-size: 14px;
+    color: white;
+}
+
+.form_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+
+
+.form_txt {
+    color: white;
+    font-size: 20px;
+    width: 50%;
+}
+
+.form_btn {
+    max-width: 15rem;
+    width: 100%;
+    padding: 15px;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    color:white;
+    transition: all 0.3s ease;
+
+}
+
+
+
+form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.inp_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    color: white;
+    font-size: 18px;
+}
+
+input {
+    max-width: 15rem;
+    width: 100%;
+    padding: 15px;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    color:white;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: white;
+    font-size: 14px;
+}
+
+
+.last_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logomini_svg {
+    width: 20rem;
+}
+
+.btn2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.last1 {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.footer_texts {
+    margin-top: 4rem;
+}
+
+.footer_txt {
+    color: white;
+    font-size: 16px;
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .nav {
+        width: 80%;
+        margin-top: 2rem;
+    }
+
+    .nav_social {
+        width: 50%;
+        margin-top: 2rem;
+    }
+
+    .nav_round {
+        height: 3.5rem;
+    }
+
+    /*    form*/
+
+    .form_btn {
+        max-width: 10rem;
+        height: 4rem;
+    }
+
+    .form_txt {
+        width: 60%;
+    }
+
+    .response {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+}
+
+
+@media only screen and (max-width: 700px) {
+    /*nav*/
+    .nav  {
+        width: 90%;
+    }
+    .nav5 {
+        display: none;
+    }
+
+    .nav_round {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .nav_icons {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    /*form*/
+    form {
+        display: block;
+    }
+
+    input {
+        max-width: 30rem;
+        width: 100%;
+    }
+
+    .inp_box {
+        margin-top: 1.5rem;
+    }
+
+    .last_box {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+
+
+    .nav_svg {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .nav_txt {
+        font-size: 14px;
+    }
+
+    .form_btn {
+        max-width: 7rem;
+        font-size: 14px;
+        height: 2.5rem;
+    }
+
+}

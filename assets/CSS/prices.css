@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Astron Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Astron Regular'), url('../fonts/Astron.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Evolventa Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Evolventa Regular'), url('../fonts/Evolventa/Evolventa-Regular.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Evolventa Oblique';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Evolventa Oblique'), url('../fonts/Evolventa/Evolventa-Oblique.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Evolventa Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Evolventa Bold'), url('../fonts/Evolventa/Evolventa-Bold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Evolventa Bold Oblique';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Evolventa Bold Oblique'), url('../fonts/Evolventa/Evolventa-BoldOblique.woff') format('woff');
+}
+
+
+
+body {
+    font-family: Arial, sans-serif; /* Global font */
+    color: #333; /* Global text color */
+}
+
+.shadow {
+    border-radius: 2.5rem;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), /* Darker shadow */
+    inset -2px -2px 5px rgba(255, 255, 255, 0.5); /* Lighter shadow */
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4), /* Stronger inner shadow for pressed effect */
+    inset -1px -1px 2px rgba(255, 255, 255, 0.3); /* Adjusted lighter shadow */
+    transform: translateY(2px); /* Simulate button being pressed down */
+    background: #c0c0c0; /* Slightly darker gray on hover */
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../elems/background.webp");
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.price_btn {
+    border: none;
+    font-size: 18px;
+    font-family: "Astron Regular";
+    width: 20vw;
+    background: none;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.tabs_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+span {
+    font-family: "Astron Regular";
+}
+
+/*cards*/
+
+.price_card_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.price_card {
+    border: 2px solid;
+    border-color: white;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 3px solid white;
+}
+
+
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.status {
+    font-size: 20px;
+    font-family: "Evolventa Regular";
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.price_txt {
+    font-size: 56px;
+    font-family: "Evolventa Regular";
+    color: black;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+li {
+    font-size: 14px;
+    font-family: "Evolventa Regular";
+    text-align: center;
+}
+
+.workers {
+    list-style-type: upper-greek;
+}
+
+.wo {
+    margin-top: 1rem;
+}
+
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 700px) {
+    .tabs_buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .price_btn {
+        border: none;
+        font-size: 18px;
+        font-family: "Astron Regular";
+        width: 100%;
+        background: none;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+    }
+
+    .price_card_container {
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    .price_card {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    .top {
+        border: none;
+    }
+
+    .price_txt {
+        display: none; /* Hide price on smaller screens */
+    }
+
+    .price_card .bottom {
+        display: block; /* Hide all card details by default */
+    }
+
+    .price_card.expanded .bottom {
+        display: none; /* Show details only if the card has the 'expanded' class */
+    }
+}
